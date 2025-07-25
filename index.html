@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HFit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      /* Fix z-index for hero button */
+      .hero-info {
+        position: relative;
+        z-index: 1000;
+      }
+      .book-session-btn {
+        padding: 10px 20px;
+        background: #ff5722;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: background 0.3s ease;
+        position: relative;
+        z-index: 1001;
+      }
+      .book-session-btn:hover {
+        background: #e64a19;
+      }
+
+      /* Prevent videos from blocking clicks */
+      video {
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <video
+        class="back-vid"
+        autoplay
+        loop
+        muted
+        plays-inline
+        src="videos/galaxy.mp4"
+      ></video>
+
+      <header data-aos="fade-down" data-aos-duration="2000">
+        <div class="left">
+          
+          <h2><span style="color: #72a1dea2">Harish</span>Fit</h2>
+        </div>
+
+        <ul>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Workout Plans</a></li>
+          <li><a href="#">Nutrition</a></li>
+        </ul>
+
+        <div class="box-icons">
+          <p><i class="bx bxl-youtube"></i></p>
+          <p><i class="bx bxl-instagram"></i></p>
+          <p><i class="bx bxl-facebook"></i></p>
+        </div>
+
+        <div class="menu-icon">
+          <i class="bx bx-menu"></i>
+        </div>
+      </header>
+
+      <div class="sidebar">
+        <div class="close-icon">
+          <i class="bx bx-x"></i>
+        </div>
+       
+        <div class="social-sidebar">
+          <a><i class="bx bxl-youtube"></i></a>
+          <a><i class="bx bxl-instagram"></i></a>
+          <a><i class="bx bxl-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="blackhole-box" data-aos="fade-down" data-aos-duration="2000">
+        <video
+          autoplay
+          loop
+          muted
+          plays-inline
+          src="videos/blackhole.mp4"
+        ></video>
+      </div>
+
+      <section class="hero">
+        <div
+          class="hero-info autoBlur"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <div class="hero-info-title">
+            <i class="bx bx-dumbbell"></i>
+            Personal Fitness Training
+          </div>
+          <h1 data-aos="fade-right" data-aos-duration="3000">
+            Achieve <span class="gradient">Your Best</span> Body
+            <span class="gradient">Transformation</span>
+          </h1>
+          <p>
+            I'm a certified personal trainer specializing in weight loss, muscle
+            gain, and overall fitness. Explore my training programs and success
+            stories.
+          </p>
+
+          <!-- Hero Book Session Button -->
+          <button class="book-session-btn">
+            <i class="bx bx-send"></i> Book Session
+          </button>
+        </div>
+
+        <div class="skills-video-box">
+          <video
+            class="skills-video autoBlur"
+            autoplay
+            loop
+            muted
+            plays-inline
+            src="videos/gym-training.mp4"
+          ></video>
+        </div>
+        <div class="scroll-down"></div>
+      </section>
+
+      <!-- Trainee Profile Section -->
+      <section class="info-section">
+        <h1 class="section-title autoDisplay">Trainee Profile 💪</h1>
+        <div class="info-cards">
+          <div class="card">
+            <h1>Meet Your Trainer</h1>
+            <p>
+              With 4+ years of experience in personal training, I help clients
+              build strength, lose fat, and maintain a healthy lifestyle with
+              customized plans.
+            </p>
+            <img
+              src="https://th.bing.com/th/id/OIP.9IArujetqE31LGo79IxGxwAAAA?w=249&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+              alt=""
+            />
+          </div>
+
+          <div class="card">
+            <h1>Fitness Philosophy</h1>
+            <p>
+              I focus on balanced workouts, proper nutrition, and consistency to
+              ensure lasting fitness results.
+            </p>
+            <img
+              src="https://th.bing.com/th/id/OIP.G_Og6YpyRQCqOEbQng5XzAHaCp?w=313&h=125&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+              alt=""
+            />
+          </div>
+
+          <div class="card">
+            <h1>Flexible Sessions</h1>
+            <p>
+              Available for both online and in-person training sessions,
+              catering to all fitness levels.
+            </p>
+            <video
+              src="videos/glob.mp4"
+              autoplay
+              loop
+              muted
+              plays-inline
+            ></video>
+            <button class="book-session-btn">
+              <i class="bx bx-send"></i> Book Session
+            </button>
+          </div>
+
+          <div class="card">
+            <h1>Passion for Fitness</h1>
+            <p>
+              Helping people transform their lives through fitness is my
+              ultimate passion. Let’s achieve your dream physique together.
+            </p>
+            <img
+              src="https://th.bing.com/th/id/OIP.NM--vKtSwZftNFYuXZpkvQHaEK?w=307&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+        <!-- Gym Plans Section -->
+      <section class="my-project">
+        <h1 class="section-title autoDisplay">Gym Plans 🏋️‍♂️</h1>
+
+        <div class="project-card">
+          <div class="project-vidbox autoBlur">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              src="videos/gym1.mp4"
+            ></video>
+            <div class="hover-sign"></div>
+          </div>
+          <div class="project-info fadein-left">
+            <h1>Ultimate <span class="gradient">Fat Loss</span> Plan</h1>
+            <p>
+              A complete 12-week fat-burning program with customized cardio,
+              strength training, and meal guidance.
+            </p>
+            <a href="test.html" class="view-plan-btn">
+              <i class="bx bx-link-external"></i> View Plan
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-vidbox autoBlur">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              src="videos/gym2.mp4"
+            ></video>
+          </div>
+          <div class="project-info fadein-left">
+            <h1>Lean <span class="gradient">Muscle</span> Gain</h1>
+            <p>
+              Build a strong and lean physique with this 8-week progressive
+              overload training and high-protein diet guide.
+            </p>
+            <a href="test.html" class="view-plan-btn">
+              <i class="bx bx-link-external"></i> View Plan
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-vidbox autoBlur">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              src="videos/gym3.mp4"
+            ></video>
+          </div>
+          <div class="project-info fadein-left">
+            <h1>Full Body <span class="gradient">Strength</span></h1>
+            <p>
+              Perfect for beginners, this plan covers strength, endurance, and
+              mobility for a well-rounded fitness foundation.
+            </p>
+            <a href="test.html" class="view-plan-btn">
+              <i class="bx bx-link-external"></i> View Plan
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section class="skills-section">
+        <h1 class="section-title autoDisplay">My Expertise 🏆</h1>
+        <div class="skills-box autoDisplay">
+          <img class="skills-image" src="images\digital brain (2).png" alt="" />
+          <div class="Designer">
+            <h1 class="gradient">Strength Coach <i class="bx bx-run"></i></h1>
+            <p>
+              Specializing in strength training, endurance building, and
+              weightlifting techniques for all experience levels.
+            </p>
+          </div>
+
+          <div class="coder">
+            <h1 class="gradient">
+              Nutrition Expert <i class="bx bx-food-menu"></i>
+            </h1>
+            <p>
+              Creating customized meal plans to complement your workout and help
+              you achieve sustainable fitness goals.
+            </p>
+          </div>
+
+          <div
+            class="slider"
+            reverse="true"
+            style="--width: 100px; --height: 100px; --quantity: 9"
+          >
+            <div class="list">
+              <div class="item" style="--position: 1">
+                <img src="images/icon1.png" alt="" />
+              </div>
+              <div class="item" style="--position: 2">
+                <img src="images/icon2.png" alt="" />
+              </div>
+              <div class="item" style="--position: 3">
+                <img src="images/icon3.png" alt="" />
+              </div>
+              <div class="item" style="--position: 4">
+                <img src="images/icon4.png" alt="" />
+              </div>
+              <div class="item" style="--position: 5">
+                <img src="images/icon5.png" alt="" />
+              </div>
+              <div class="item" style="--position: 6">
+                <img src="images/icon6.png" alt="" />
+              </div>
+              <div class="item" style="--position: 7">
+                <img src="images/icon7.png" alt="" />
+              </div>
+              <div class="item" style="--position: 8">
+                <img src="images/icon8.png" alt="" />
+              </div>
+              <div class="item" style="--position: 9">
+                <img src="images/icon9.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <h1 class="section-title autoDisplay">Let's Train Together 💬</h1>
+        <div class="social-box autoBlur">
+          <a href="#"><i class="bx bxs-phone"></i> +39 111 222 444</a>
+          <a href="#"><i class="bx bxl-telegram"></i> Harish</a>
+          <a href="#"><i class="bx bxl-instagram"></i> @Harish</a>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          </div>
+        </div>
+        <div class="contact-box autoBlur">
+          <p>
+            Whether you want to start your fitness journey, improve performance,
+            or achieve specific goals, I’m here to guide you.
+          </p>
+
+          <p>Full Name</p>
+          <input placeholder="Your Full name" type="text" />
+
+          <p>Email Address</p>
+          <input placeholder="Your Email" type="email" />
+
+          <p>Your Message</p>
+          <input
+            class="input-message"
+            type="text"
+            placeholder="Share your fitness goals..."
+          />
+
+          <button>Send Message <i class="bx bx-mail-send"></i></button>
+        </div>
+      </section>
+
+      <section class="footer">
+        <h1>©️2025, Made with ❤️ </h1>
+        <div class="box-icons">
+          <p><i class="bx bxl-youtube"></i></p>
+          <p><i class="bx bxl-instagram"></i></p>
+          <p><i class="bx bxl-facebook"></i></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".book-session-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            window.location.href = "ver.html";
+          });
+        });
+      });
+      AOS.init();
+    </script>
+  </body>
+</html>

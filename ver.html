@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiladiFit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      /* Login & Register Overlay */
+      .login-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        flex-direction: column;
+      }
+
+      .login-box, .register-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      .login-box.active, .register-box.active {
+        display: block;
+      }
+
+      .login-box h2, .register-box h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .login-box input, .register-box input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .login-box button, .register-box button {
+        padding: 10px 20px;
+        background: #ff5722;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+        margin-top: 5px;
+      }
+
+      .login-box button:hover, .register-box button:hover {
+        background: #e64a19;
+      }
+
+      .switch-btn {
+        background: none;
+        color: #333;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        margin-top: 10px;
+        text-decoration: underline;
+      }
+
+      /* Hide main content until login */
+      .container {
+        display: none;
+      }
+
+      /* Hero Button */
+      .book-session-btn {
+        padding: 10px 20px;
+        background: #ff5722;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: background 0.3s ease;
+      }
+      .book-session-btn:hover {
+        background: #e64a19;
+      }
+
+      video {
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOGIN / REGISTER SCREEN -->
+    <div class="login-container" id="loginContainer">
+      <!-- LOGIN BOX -->
+      <div class="login-box active" id="loginBox">
+        <h2>Login to MiladiFit</h2>
+        <input type="email" id="loginEmail" placeholder="Enter your email" />
+        <input type="password" id="loginPassword" placeholder="Enter your password" />
+        <button id="loginBtn">Login</button>
+        <button class="switch-btn" id="showRegister">New user? Register</button>
+      </div>
+
+      <!-- REGISTER BOX -->
+      <div class="register-box" id="registerBox">
+        <h2>Create New Account</h2>
+        <input type="email" id="regEmail" placeholder="Enter your email" />
+        <input type="password" id="regPassword" placeholder="Enter your password" />
+        <button id="registerBtn">Register</button>
+        <button class="switch-btn" id="showLogin">Already have an account? Login</button>
+      </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      const loginBox = document.getElementById("loginBox");
+      const registerBox = document.getElementById("registerBox");
+      const showRegister = document.getElementById("showRegister");
+      const showLogin = document.getElementById("showLogin");
+      const loginBtn = document.getElementById("loginBtn");
+      const registerBtn = document.getElementById("registerBtn");
+
+      // Switch between login and register
+      showRegister.addEventListener("click", () => {
+        loginBox.classList.remove("active");
+        registerBox.classList.add("active");
+      });
+
+      showLogin.addEventListener("click", () => {
+        registerBox.classList.remove("active");
+        loginBox.classList.add("active");
+      });
+
+      // Register new user
+      registerBtn.addEventListener("click", () => {
+        const email = document.getElementById("regEmail").value.trim();
+        const password = document.getElementById("regPassword").value.trim();
+
+        if (!email || !password) {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        if (users.find(user => user.email === email)) {
+          alert("User already exists!");
+          return;
+        }
+
+        users.push({ email, password });
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("User registered successfully! You can now login.");
+        document.getElementById("regEmail").value = "";
+        document.getElementById("regPassword").value = "";
+        showLogin.click();
+      });
+
+      // Login user
+      loginBtn.addEventListener("click", () => {
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value.trim();
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const found = users.find(user => user.email === email && user.password === password);
+
+        if (found) {
+          window.location.href = "dash.html";
+        } else {
+          alert("Invalid email or password!");
+        }
+      });
+
+      // Hero button redirects
+      document.querySelectorAll(".book-session-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          window.location.href = "dash.html";
+        });
+      });
+    </script>
+  </body>
+</html>

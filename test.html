@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiladiFit</title>
+    <link rel="stylesheet" href="test.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      /* Back Button Styles */
+      .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: #ff5722;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: background 0.3s ease;
+        z-index: 1000;
+      }
+      .back-btn:hover {
+        background: #e64a19;
+      }
+      .back-btn i {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="gym-plans">
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="videos/back.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Optional Dark Overlay -->
+      <div class="overlay"></div>
+
+      <!-- Back Button -->
+      <a href="index.html" class="back-btn">
+        <i class="bx bx-arrow-back"></i> Back
+      </a>
+
+      <!-- Section Content -->
+      <h1 class="section-title">Gym Plans 🏋️‍♂️</h1>
+      <div class="plans-container">
+        <!-- Plan 1 -->
+        <div class="plan-card plan-red">
+          <img src="https://th.bing.com/th/id/OIP.aZZgizDQM-8Rz_XdDe_A0AHaD7?w=297&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fat Loss" />
+          <h2>Ultimate Fat Loss</h2>
+          <p>
+            Get the ultimate 12-week fat-burning plan with cardio, strength,
+            and meal guidance! Rs 4999
+          </p>
+          <a href="#">Check it out <span>›</span></a>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan-card plan-yellow">
+          <img
+            src="https://th.bing.com/th/id/OIP.oHDe5qzVwmnepGVgi2JG_AHaD4?w=320&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Muscle Gain"
+          />
+          <h2>Lean Muscle Gain</h2>
+          <p>
+            Build strong lean muscles with an 8-week progressive training &
+            high-protein diet guide. Rs 5999
+          </p>
+          <a href="#">Check it out <span>›</span></a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card plan-purple">
+          <img
+            src="https://th.bing.com/th/id/OIP.D_99WJDakvlCZ9MvNIOU_QAAAA?w=273&h=195&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Full Body Strength"
+          />
+          <h2>Full Body Strength</h2>
+          <p>
+            A beginner-friendly strength & endurance plan for a complete body
+            transformation. Rs 7999
+          </p>
+          <a href="#">Check it out <span>›</span></a>
+        </div>
+
+        <!-- Plan 4 -->
+        <div class="plan-card plan-red">
+          <img
+            src="https://th.bing.com/th/id/OIP.W_3yHHONmckeyqm-ME8I9gHaE8?w=276&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Nutrition Plan"
+          />
+          <h2>Nutrition Expert Plan</h2>
+          <p>
+            Customized meal plans to complement your workouts and help achieve
+            fitness goals. Rs 6999
+          </p>
+          <a href="#">Check it out <span>›</span></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
